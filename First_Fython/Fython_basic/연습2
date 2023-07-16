@@ -1,0 +1,26 @@
+
+print(abs(-5)) # 절댓값임 5나오겠지 
+print(pow(4,2)) #4의 2승 =16
+print(max(5,10)) # 더 큰값나오는거임 그니깐 10 
+print(min(5,10))#더 작은값나오는거임 그니깐 5
+print(round(3.14))#반올림하는거임 그니까 3
+from math import * #나중에 배운데 
+print(floor(4.99))#내림 그니깐4 
+print(ceil(3.01))#올림 그니깐 4
+print(sqrt(16)) #제곱근 그니깐 4  
+print(sqrt(7)) #연습
+
+#문자열 쓰기 
+  
+sentence= """나는 오정현이고 
+파
+이                                              
+썬
+은 쉬워요"""
+print(sentence)
+sentence="""나는오정현이고 파이썬은쉬워요"""
+print(sentence)
+
+#원래는 이렇게 새로로 쭉쭉 쓰면 안돼는데 """붙히면 ㄱㅊ음
+
+

@@ -1,0 +1,88 @@
+#리스트
+
+subway1=10
+subway2=20
+subway3=30
+
+subway=[10,20,30]
+print(subway)
+ 
+subway=["유재석","조세호","박명수"]
+print(subway)
+#조세호가 몇번쨰 칸에 타고있는가?컴퓨터는 셀때 0부터 시작하므로 1임 1
+print(subway.index("조세호"))
+#하하가 다음정류장에서탐 유재석 조세호 박명수 하하
+subway.append("하하")
+print(subway)
+
+#정형돈을 유재석과 조세호 사이에 태우기  유재석은 0번째이므로 1번쨰에다가 정형돈 넣는거임 유재석 정형돈 조세호 박명수 하하 
+subway.insert(1,"정형돈")
+print(subway)
+
+#지하철에 있는사람을 한명씩뒤에서 꺼냄 유재석 정형돈 조세호 박명수 
+print(subway.pop())
+print(subway)
+
+#같은 이름의 사람이 몇명있는지 확인 유재석 두명
+subway.append("유재석")
+print(subway)
+print(subway.count("유재석"))
+
+#정렬도 가능 1 2 3 3 5로 이렇게 정렬 되네
+num_list=[5,2,3,3,1]
+num_list.sort()
+print(num_list)
+
+#순서 뒤집기 가능 
+num_list.reverse()
+print(num_list)
+
+# 모두 지우기 
+num_list.clear()     #여기에 괄호 붙히는 까닭을 모르겠음 나중에 배울듯
+print(num_list)
+
+#다양한자료형 함께 사용
+num_list=[5,2,4,3,1]
+mix_list=["조세호",20,True]
+print(mix_list)
+#리스트 확장(합치다)
+num_list.extend(mix_list)
+print(num_list  )
+
+#사전 
+
+#cabinet={3:"유재석",100:"김태호"}
+#print(cabinet[3])    #유재석만 출력됨 
+#print(cabinet[100])    #김태호만 출력됨
+#print (cabinet.get(3))  #유재석만 출력됨 위에랑 똑같음 
+#print(cabinet[5])        #오류뜸 캐비넷에 5라는 수가 없기 떄문 
+#print(cabinet.get(5))     #얘는 오류가 아니고 none 이 뜸 get 쓰는데선 () 이거쓰고 위에 경우에선 [] 이걸써야됨 
+#print(cabinet.get(5,"사용가능"))  #5가 있으면 5를 가져오고 없으면 none 대신 "사용가능"이 들어감   
+#print(3 in cabinet)      #true 3이 캐비넷에 있으므로 트루   
+#print(5 in cabinet)      #false 5이 캐비넷에 없으므로 펄스  
+cabinet={"A-3":"유재석","b-100":"김태호"}
+print(cabinet["A-3"])
+print(cabinet["b-100"])
+
+#새 손님 
+print(cabinet)
+cabinet["A-3"]="김종국"  #원래 A-3은 유재석 이였는데 김종국으로 치환돼고 김태호 그대로 들어가고 조세호 추가돼므로  {'A-3': '김종국', 'b-100': '김태호', 'C-20': '조세호'} 으로 출력됨 
+cabinet["C-20"]="조세호"
+print(cabinet)
+
+#간 손님 
+del cabinet["A-3"]   #a-3 이였던 김종국이 없어짐 
+
+#key 들만 출력
+print(cabinet.keys())  #key인 b-100,c-20 만 남아서 나옴 아까 a-3은 위에 식떄문에 없어지고 
+
+#value 만 출력  
+print(cabinet.values())    #values 인 김태호와 조세호만 나옴 
+
+#ket , value 쌍으로 출력 
+print(cabinet.items())       #b-100 김태호 c-20 조세호 들만 출력 
+
+#목욕탕 폐점
+cabinet.clear()
+print(cabinet)     #청소했으니깐 빈값이 나오는데 {} 이렇게 표현됨    
+

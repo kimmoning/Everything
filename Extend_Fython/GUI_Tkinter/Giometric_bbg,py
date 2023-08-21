@@ -1,0 +1,29 @@
+import math
+
+def calculate_bullet_position(range, wind_speed, atmospheric_conditions, bullet_characteristics):
+    # 탄환의 비행 경로를 예측하는 알고리즘을 구현합니다.
+    # 예측된 탄환의 위치를 계산하고 반환합니다.
+    # 특정 수식이나 모델을 사용하여 탄환의 위치를 예측할 수 있습니다.
+    # 이 예시에서는 단순히 각 변수를 더하는 방식을 사용합니다.
+    
+    bullet_position = range + wind_speed + atmospheric_conditions + bullet_characteristics
+    return bullet_position
+
+# 변수 설정
+range = 1000  # 사거리
+wind_speed = 10  # 풍속
+atmospheric_conditions = 5  # 대기 상태
+bullet_characteristics = 2  # 탄환 특성
+
+# 탄환 위치 예측 계산
+predicted_position = calculate_bullet_position(range, wind_speed, atmospheric_conditions, bullet_characteristics)
+
+# 표적지의 정중앙 좌표
+target_center = 0
+
+# 탄환의 위치에서 표적지의 정중앙을 뺀 값을 XY축 값으로 표현
+x_offset = predicted_position
+y_offset = predicted_position
+
+print("탄환의 위치 (X축):", x_offset)
+print("탄환의 위치 (Y축):", y_offset)
